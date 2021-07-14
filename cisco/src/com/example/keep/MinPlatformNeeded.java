@@ -29,7 +29,8 @@ public class MinPlatformNeeded {
 				  maxPlatForm = neededPlatform;
 				}
 			}else {
-				neededPlatform--;j++;
+				neededPlatform--;
+				j++;
 			}
 		}
 		
