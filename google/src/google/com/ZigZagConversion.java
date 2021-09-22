@@ -49,23 +49,7 @@ public class ZigZagConversion {
 	        
 	    }
 	 
-	  public static String convertarray(String s, int numRows) {
-	       char[] arr = new char[s.length()];
-	       int dir =0;
-	       int j= 0;
-	       for(int i=0;i<s.length();i++) {
-	    	   arr[i] = s.charAt(dir);
-	    	   j++;
-	    	   if(j==numRows) {
-	    		   j=0;
-	    	   }
-	    	   dir = (numRows*j) + ((dir+1)%numRows);
-	       }
-	        
-	       
-	       return String.valueOf(arr);
-	        
-	    }
+	
 
 	public static void main(String[] args) {
 		System.out.println(convert("PAYPALISHIRING",3));

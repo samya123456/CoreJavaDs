@@ -37,7 +37,7 @@ public class SplitArrayToFibonacciSeq {
 	}
 
 	public static void main(String[] args) {
-		splitInFibonacci("123456579");
+		System.out.println(splitInFibonacci("123456579"));
 
 	}
 
