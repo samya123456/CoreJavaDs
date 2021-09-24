@@ -49,6 +49,7 @@ public class TrieAutoCompleteWord {
 			index = typedWord.charAt(i) - 'a';
 			if (currNode.child[index] == null) {
 				System.out.println("No suggestion found for " + typedWord);
+				return;
 			}else {
 				
 			}
@@ -82,10 +83,11 @@ public class TrieAutoCompleteWord {
 		
 		TrieAutoCompleteWord trieAutoCompleteWord = new TrieAutoCompleteWord();
 		trieAutoCompleteWord.init();
-		trieAutoCompleteWord.insert("abc");
+		trieAutoCompleteWord.insert("adc");
 		trieAutoCompleteWord.insert("abd");
 		trieAutoCompleteWord.insert("abe");
-		trieAutoCompleteWord.autoComplete("a");
+		trieAutoCompleteWord.insert("bad");
+		trieAutoCompleteWord.autoComplete("d");
 
 	}
 
