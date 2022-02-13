@@ -14,7 +14,7 @@ public class Hurry {
 		   int max=0;
 		   for(int i=0;i<n;i++){
 		       int totalTime =t;
-		       int distance = 2*task[i][0];
+		       int distance = 2*task[i][0]; 
 		       int remainingTime=totalTime-distance;
 		       int currEffort=task[i][1];
 		       if(remainingTime<0){

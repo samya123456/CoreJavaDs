@@ -41,7 +41,7 @@ public class TriePrefixCount {
 		
 	}
 	
-	public int getCountPrefix(String prefix) {
+	public int  getCountPrefix(String prefix) {
 		TrieNode currNode = root;
 		int index;
 		

@@ -6,34 +6,41 @@ import java.util.List;
 
 public class PermutationNumber {
 	
-	public static void permutationsNumber(Integer arr[]) {
-		List<Integer> input = Arrays.asList(arr);
-		permutationsNumberUtil(input,new ArrayList<Integer>(), arr.length);
-	}
-	
-	public static void permutationsNumberUtil(List<Integer> input ,List<Integer>ros,int size ) {
-		if(ros.size()==size) {
-			System.out.println(ros);
-			
-			return;
-		}
-		
-		for(int i=0;i<input.size();i++) {
-			ros.add(input.get(i));
-			List<Integer> temp = new ArrayList<Integer>();
-			for(int p=0;p<input.size();p++) {
-				if(i!=p) {
-					temp.add(input.get(p));
-				}
-			}
-			permutationsNumberUtil(temp,ros,size);
-			ros.remove(ros.size()-1);
-		}
-	}
+	 public static  List<List<Integer>> permute(int[] nums) {
+	        List<List<Integer>> output = new ArrayList<List<Integer>>();
+	        List<Integer> input = new ArrayList<Integer>();
+	        int n = nums.length;
+	        for(int i=0;i<n;i++){
+	            input.add(nums[i]);
+	        }
+	        List<Integer> restOfList = new ArrayList<Integer>();
+	        permuteUtil(input,restOfList,n,output);
+	        return output;
+	        
+	    }
+	    
+	    public static void permuteUtil( List<Integer> input,  List<Integer> restOfList ,int n,  List<List<Integer>> output){
+	        if(restOfList.size()==n){
+	            output.add(new ArrayList<Integer>(restOfList));
+	            return;
+	        }
+	        
+	        for(int i =0;i<input.size();i++){
+	           restOfList.add(input.get(i));
+	           List<Integer> newInput = new ArrayList<Integer>();
+	           for(int j=0;j<input.size();j++){
+	               if(i!=j){
+	                 newInput.add(input.get(j));  
+	               }
+	           }
+	            permuteUtil(newInput,restOfList,n,output);
+	            restOfList.remove(restOfList.size()-1);
+	        }
+	    }
 
 	public static void main(String[] args) {
-		Integer[] arr = {1,2,3};
-		permutationsNumber(arr);
+		int[] arr = {1,2,3};
+		permute(arr);
 
 	}
 

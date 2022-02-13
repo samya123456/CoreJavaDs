@@ -12,7 +12,7 @@ public class ProducerConsumer {
 		
 		public void produce() throws InterruptedException {
 			synchronized(key) {
-				if(isFull(buffer)) {
+				while(isFull(buffer)) {
 					key.wait();
 				}
 				buffer[count++] =1;	
@@ -33,7 +33,7 @@ public class ProducerConsumer {
 	static class Consumer{
 		public void consumes() throws InterruptedException {
 			synchronized(key) {
-				if(isEmpty(buffer)) {
+				while(isEmpty(buffer)) {
 					key.wait();
 				}
 				buffer[--count] =0;	

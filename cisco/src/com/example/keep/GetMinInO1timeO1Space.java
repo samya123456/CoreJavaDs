@@ -1,4 +1,4 @@
-package com.example.keep;
+  package com.example.keep;
 
 import java.util.Stack;
 
@@ -33,7 +33,7 @@ public class GetMinInO1timeO1Space {
 			originalStack.pop();
 		}else {
 			min = 2*min -originalStack.peek();
-			originalStack.remove(originalStack.peek());
+			originalStack.pop();
 		}
 	}
 

@@ -8,14 +8,13 @@ public class LongestIncreasingSubsequence {
 	public int longestIncreasingSubsequence(int[] input) {
 		Integer n = input.length;
 		Integer[] lis = new Integer[n];
-		for(int i=0;i<n;i++) {
-			lis[i] =1;
-		}
+		Arrays.fill(lis, 1);
 		
 		
 		for(int i=1;i<n;i++) {
 			for(int j=0;j<i;j++) {
-				if(input[i]>input[j] && lis[i]<=lis[j]) {
+				if(input[i]>input[j]
+						&& lis[i]<=lis[j]) {
 					lis[i] = 1+lis[j];
 				}
 			}
@@ -58,7 +57,7 @@ public class LongestIncreasingSubsequence {
 		//int[] input = {1, 101, 2, 3, 100};
 		//System.out.println(new LongestIncreasingSubsequence().maxSumIncreasingSubsequence(input));
 		
-		System.out.println(I.x);
+		
 
 	}
 
