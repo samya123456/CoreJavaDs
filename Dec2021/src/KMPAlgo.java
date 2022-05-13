@@ -21,7 +21,7 @@ public class KMPAlgo {
 				
 			}
 			if(j==m) {
-				System.out.println(i-j);
+				System.out.println("Patter found at "+ (i-j));
 				j=lps[j-1];	
 			}
 			
@@ -54,7 +54,10 @@ public class KMPAlgo {
 	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		String text= "AABAACAADAABAABA";
+		String pattern ="AABA";
+		
+		KMPSearch(text,pattern);
 
 	}
 

@@ -24,7 +24,7 @@ public class MinimumWindowSubstring {
 					res = s.substring(left, right + 1);
 				}
 				
-				if (++letterCount[s.charAt(left)] >= 0) {
+				if (++letterCount[s.charAt(left)] >0) {
 					--count;
 				}
 				++left;

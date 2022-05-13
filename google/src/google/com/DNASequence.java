@@ -23,6 +23,32 @@ public class DNASequence {
 		}
 		return repeatedCharacter;
 	}
+	
+	
+	public static List<String> findRepeatedDnaSequences(String s) {
+        List<String> output = new ArrayList<>();
+        Map<String,Integer> map = new HashMap<>();
+        if(s.length()<10){
+            return output;
+        }
+        
+        
+        for(int i=10;i<=s.length();i++){
+            String current = s.substring(i-10,i);
+            if(map.containsKey(current)){
+                int count = map.get(current);
+                if(count==1){
+                    output.add(current); 
+                }
+                 map.put(current,count+1);
+            }else{
+                map.put(current,1);
+            }
+        }
+        
+        return output;
+        
+    }
 
 	public static void main(String[] args) {
 
@@ -30,7 +56,8 @@ public class DNASequence {
 		// Output: ["AAAAACCCCC","CCCCCAAAAA"]
 		// https://leetcode.com/problems/repeated-dna-sequences/
 		
-		System.out.println(getRepeatedString("AAAAACCCCCAAAAACCCCCCAAAAAGGGTTT"));
+		//System.out.println(getRepeatedString("AAAAACCCCCAAAAACCCCCCAAAAAGGGTTT"));
+		System.out.println(findRepeatedDnaSequences("AAAAAAAAAAA"));
 
 	}
 

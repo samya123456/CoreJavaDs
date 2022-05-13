@@ -36,7 +36,7 @@ public class CombinationSum {
 	//	Input: candidates = [2,3,6,7], target = 7
 		//		Output: [[2,2,3],[7]]
 		int[] candidates = {2,3,6,7};
-		combinationSum(candidates,7);
+		System.out.println(combinationSum(candidates,7));;
 
 	}
 

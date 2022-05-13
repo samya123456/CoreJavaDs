@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="ADP/src"/>
+	<classpathentry kind="src" path="apple/src"/>
+	<classpathentry kind="src" path="boeing/src"/>
+	<classpathentry kind="src" path="cisco/src"/>
+	<classpathentry kind="src" path="Dec2021/src"/>
+	<classpathentry kind="src" path="google/src"/>
+	<classpathentry kind="src" path="LeetCode/src"/>
+	<classpathentry kind="src" path="Microsoft/src"/>
+	<classpathentry kind="src" path="Nov2021/src"/>
+	<classpathentry kind="src" path="Oracle/src"/>
+	<classpathentry kind="src" path="payPal/src"/>
+	<classpathentry kind="src" path="Pega/src"/>
+	<classpathentry kind="src" path="practice/src"/>
+	<classpathentry kind="src" path="SAP/src"/>
+	<classpathentry kind="src" path="Util/src"/>
+	<classpathentry kind="output" path="ADP/bin"/>
+</classpath>

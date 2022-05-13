@@ -54,8 +54,8 @@ public class LongestIncreasingSubsequence {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		//int[] input = {1, 101, 2, 3, 100};
-		//System.out.println(new LongestIncreasingSubsequence().maxSumIncreasingSubsequence(input));
+		int[] input = {1, 101, 2, 3, 100};
+		System.out.println(new LongestIncreasingSubsequence().maxSumIncreasingSubsequence(input));
 		
 		
 

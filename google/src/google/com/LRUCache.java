@@ -31,7 +31,8 @@ public class LRUCache {
 	}
 
 	public void put(int key, int value) {
-		if(cache.containsKey(key)) {
+		
+		if( cache.containsKey(key)) {
 			cache.remove(key);
 			cache.put(key,value);
 		}else if (cache.size() < capacity) {
@@ -70,7 +71,7 @@ public class LRUCache {
 		  lRUCache.put(4, 1);
 		  System.out.println(lRUCache.get(2)); */  //-1
 		
-		LRUCache lRUCache = new LRUCache(2); 
+		  LRUCache lRUCache = new LRUCache(2); 
 		  lRUCache.put(2, 1); 
 		  lRUCache.put(1, 1);
 		  lRUCache.put(2, 3); 

@@ -23,7 +23,7 @@ public class PowXn {
 
 	public static void main(String[] args) {
 
-System.out.println(myPow(2,-2147483648));
+			System.out.println(myPow(2,-2147483648));
 
 	}
 

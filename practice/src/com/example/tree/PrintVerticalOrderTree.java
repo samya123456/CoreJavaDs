@@ -58,9 +58,7 @@ public class PrintVerticalOrderTree {
         
         Set<Map.Entry<Integer,List<Integer>>> st = map.entrySet();
         for(Map.Entry<Integer,List<Integer>>entry: st) {
-        	for(Integer i : entry.getValue()) {
-        		System.out.println(i);
-        	}
+        	System.out.println(entry.getValue());
         }
 
 

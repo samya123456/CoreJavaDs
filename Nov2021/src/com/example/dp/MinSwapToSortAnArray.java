@@ -15,7 +15,7 @@ public class MinSwapToSortAnArray {
 		
 		Arrays.sort(arr);
 		boolean[] visited = new boolean[len];
-		Arrays.fill(visited, false);
+		
 		
 		int ans =0;
 		

@@ -42,7 +42,7 @@ public class InversionOfAnArray {
 	}
 
 	public static void main(String[] args) {
-		 int[] arr = { 1, 20, 6, 4, 5 };
+		 int[] arr = {8, 4, 2, 1};
 		 System.out.println(
 				 mergeSortNCount(arr, 0, arr.length - 1));
 		    }
