@@ -18,18 +18,19 @@ public class CheckBST {
 		
 	}
 	
-	public static boolean isBST(TreeNode head,int min,int max) {
+	public static boolean isBST(TreeNode head,long min,long max) {
 		
-		if(head ==null) {
-			return true;
-		}
-		
-		if(head.data<min && head.data>max) {
-			return false;
-		}
-		
-		return isBST(head.left,min,head.data-1) && 
-			   isBST(head.right,head.data+1,max);
+		if(head == null){
+            return true;
+        }
+        
+        if (head.data < max && head.data > min ){
+            
+           return isBST(head.left, min, head.data) && 
+        		   isBST(head.right,head.data, max);
+        }
+        
+        return false;
 		
 	}
 
@@ -41,7 +42,7 @@ public class CheckBST {
         root.left.left = new TreeNode(1);
         root.left.right = new TreeNode(3);
  
-        if (isBST(root,Integer.MIN_VALUE,Integer.MAX_VALUE))
+        if (isBST(root,Long.MIN_VALUE,Long.MAX_VALUE))
             System.out.println("IS BST");
         else
             System.out.println("Not a BST");

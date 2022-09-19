@@ -61,8 +61,8 @@ public class CarPoolingLeetcode1094 {
     }
 
 	public static void main(String[] args) {
-		int[][] trips = {{2,1,5},{3,5,7}};
-		carPooling(trips,3);
+		int[][] trips = {{2,1,5},{3,3,7}};
+		System.out.println(carPooling(trips,3));;
 		
 		/*{{1,1,2},
 		 * {5,0,2},

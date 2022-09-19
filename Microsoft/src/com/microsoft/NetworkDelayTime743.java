@@ -56,7 +56,7 @@ public class NetworkDelayTime743 {
 	         int max = 0;
 	        
 	            for(int i =1;i<=n;i++){
-	                if(ans[i] ==Integer.MAX_VALUE){
+	                if(ans[i] == Integer.MAX_VALUE){
 	                    return -1;
 	                }
 	                max = Math.max(max,ans[i]);
@@ -105,7 +105,9 @@ public class NetworkDelayTime743 {
 		int n = 4; 
 		int k = 2;
 		
-		networkDelayTime(times,n,k);
+
+		
+		System.out.println(networkDelayTime(times,n,k));
 
 	}
 

@@ -3,9 +3,9 @@ package com.example.dp;
 public class FindCelebrity {
 	
 	static int[][] MATRIX =  { {0, 0, 1, 0},
-	           {0, 0, 1, 0},
-	           {0, 0, 0, 0},
-	           {0, 0, 1, 0} };
+					           {0, 0, 1, 0},
+					           {0, 0, 0, 0},
+					           {0, 0, 1, 0} };
 	
 	
 	public static int findDelebrity(int n) {

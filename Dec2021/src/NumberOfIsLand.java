@@ -11,6 +11,7 @@ public class NumberOfIsLand {
 			for(int j=0;j<cols;++j) {
 				if(mat[i][j]==1) {
 					int count =mark_dfs(mat,i,j,rows,cols,1);
+					System.out.println("Count = "+count);
 					if(count>max) {
 						max=count;
 					}
@@ -46,14 +47,14 @@ public class NumberOfIsLand {
 		                {0, 0, 0, 0, 0},
 		                {1, 0, 1, 0, 1}};
 		
-		System.out.println(countIsLand(mat));
+		countIsLand(mat);
 		
-		for(int i=0;i<5;++i) {
+		/* for(int i=0;i<5;++i) {
 			for(int j=0;j<5;++j) {
 				System.out.print(mat[i][j]+" ");
 			}
 			System.out.println();
-		}
+		} */
 		
 
 	}

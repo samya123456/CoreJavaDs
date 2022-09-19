@@ -30,11 +30,11 @@ public class VVVIPOverridingOverLoadingConcept {
 	
 	public static void main(String[] args) {
 		B b = new B();
-		b.m(null); //overriding ->overloading ->overriding
+		b.m(""); //overriding ->overloading ->overriding
 		
 		
 		
-		A a = new B();
+		A  a = new B();
 		a.m(null); //overriding ->overloading ->overriding
 		
 	}

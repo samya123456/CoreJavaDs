@@ -23,7 +23,7 @@ public class LongestCommonSubString {
 	}
 
 	public static void main(String[] args) {
-		String a ="ABCDGH";
+		String a = "ABCDGH";
 		String b = "AEDFHR";
 		System.out.println(lcs(a,b));
 

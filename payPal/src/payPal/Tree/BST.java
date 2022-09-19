@@ -3,17 +3,19 @@ package payPal.Tree;
 public class BST {
 	
 	
-	private static boolean checkBSTUtil(TreeNode root,double min,double max) {
+	private static boolean checkBSTUtil(TreeNode root,long min,long max) {
 		
-		if(root==null)
-			return true;
-		
-		if(root.data>max || root.data<min) {
-			return false;
-		}
-		
-		return checkBSTUtil(root.left, min,root.data -1)
-				&& checkBSTUtil(root.right, root.data +1,max);
+		if(root == null){
+            return true;
+        }
+        
+        if (root.data < max && root.data > min ){
+            
+           return checkBSTUtil(root.left, min, root.data) && 
+        		   checkBSTUtil(root.right,root.data, max);
+        }
+        
+        return false;
 	}
 
 	public static void main(String[] args) {
@@ -26,7 +28,7 @@ public class BST {
 		 * root.left.left = new TreeNode(1); root.left.right = new TreeNode(3);
 		 */
         
-        System.out.println(checkBSTUtil(root,-Double.MAX_VALUE,Double.MAX_VALUE));
+        System.out.println(checkBSTUtil(root,Long.MIN_VALUE,Long.MAX_VALUE));
 
 	}
 

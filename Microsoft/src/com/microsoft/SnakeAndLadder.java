@@ -12,6 +12,7 @@ public class SnakeAndLadder {
 	}
 	
 	static int getMinDiceThrows(int move[], int n) {
+		
 		int[] visited = new int[n];
 		Queue<Quentry> q =  new LinkedList<Quentry>();
 		Quentry quentry = new Quentry();

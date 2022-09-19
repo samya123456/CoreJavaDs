@@ -7,27 +7,50 @@ import java.util.List;
 public class MajorityElementII {
 	
 	 public  static List<Integer> majorityElement(int[] nums) {
-	        Arrays.sort(nums);
-	        float n = nums.length;
-	        float m = n/3;
-	        List<Integer> list = new ArrayList<>();
-	        int major = nums[0];
-	        int count = 0;
-	        for(int i = 0;i<n;i++){
-	        	if(count > m && !list.contains(major)) {
-	                   list.add(major);
-	                  
-	                }
-	            if(nums[i] == major){
-	                count++;
-	                
-	            }else {
-	               
-	                   major = nums[i];
-	                   count =1;
+		 int count1 = 0;
+	        int count2 =0;
+	        int element1 = Integer.MAX_VALUE;
+	        int element2 = Integer.MAX_VALUE;
+	        int n  = nums.length;
+	        
+	        for(int i =0;i<n;i++){
+	            if(nums[i] == element1){
+	                count1++;
+	            }else if(nums[i] == element2){
+	                count2++;
+	            }else if(count1 ==0){
+	                count1=1;
+	                element1= nums[i];
+	            }else if(count2 ==0){
+	                count2 =1;
+	                element2 = nums[i];
+	            }else{
+	                count1--;
+	                count2--;
 	            }
 	        }
-	        return list;
+	        
+	        count1 =0;
+	        count2 =0;
+	        
+	        for(int i =0;i<n;i++){
+	            if(nums[i] == element1){
+	                count1++; 
+	            }else if(nums[i] == element2){
+	                count2++;
+	            }
+	        }
+	        
+	        List<Integer> majorityElements = new ArrayList<>();
+	        
+	        if(count1> (n/3)){
+	            majorityElements.add(element1);
+	        }
+	        if(count2> (n/3)){
+	            majorityElements.add(element2);
+	        }
+	        
+	        return majorityElements;
 	    }
 
 	public static void main(String[] args) {

@@ -1,7 +1,9 @@
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class InversionOfAnArray {
-	
+	static List<Integer> output = new ArrayList<>();
 	public static int mergeSortNCount(int[] arr ,int l,int r) {
 		int count =0;
 		if(l<r) {
@@ -21,6 +23,7 @@ public class InversionOfAnArray {
 		int i=0;
 		int j=0;
 		int swaps =0;
+		int count =0;
 		int k=l;
 		
 		while(i<left.length && j<right.length) {
@@ -29,6 +32,7 @@ public class InversionOfAnArray {
 			}else {
 				arr[k++] = right[j++];
 				swaps += (m+1) -(i+l);
+				count++;
 			}
 		}
 		while(i<left.length) {
@@ -37,15 +41,19 @@ public class InversionOfAnArray {
 		while(j<right.length) {
 			arr[k++] = right[j++];
 		}
-		
+		output.add(count);
 		return swaps;
 	}
 
 	public static void main(String[] args) {
-		 int[] arr = {8, 4, 2, 1};
+		 int[] arr = {5,2,6,1};
 		 System.out.println(
 				 mergeSortNCount(arr, 0, arr.length - 1));
+		 System.out.println(output);
+		 
+		 
 		    }
+	
 
 	}
 

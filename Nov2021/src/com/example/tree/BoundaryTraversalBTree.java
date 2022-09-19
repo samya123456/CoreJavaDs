@@ -64,7 +64,7 @@ public class BoundaryTraversalBTree {
 		printLeftBoundaryTree(root.left);
 		printLeaves(root.left);
 		printLeaves(root.right);
-		printLeftBoundaryTree(root.right);
+		printRightBoundaryTree(root.right);
 	}
 
 	public static void main(String[] args) {
